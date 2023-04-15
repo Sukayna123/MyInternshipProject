@@ -1,11 +1,14 @@
 package utilities;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import pages.Sukayna_POM;
 
 public class DriverClass {
     private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
@@ -53,6 +56,8 @@ public class DriverClass {
             threadDriver.set(driver);
         }
     }
+
+
 
     public static void setThreadDriverName(String browserName){
         threadDriverName.set(browserName);

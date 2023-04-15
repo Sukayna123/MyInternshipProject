@@ -1,6 +1,7 @@
 package utilities;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -8,8 +9,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import pages.Sukayna_POM;
 
 import java.time.Duration;
+import java.util.ArrayList;
 
 public class MyMethods {
     public WebDriverWait wait = new WebDriverWait(DriverClass.getDriver(), Duration.ofSeconds(30));
@@ -89,5 +92,7 @@ public class MyMethods {
         JavascriptExecutor js = (JavascriptExecutor) DriverClass.getDriver();
         js.executeScript("arguments[0].scrollLeft += 500", element);
     }
+
+
 
 }
